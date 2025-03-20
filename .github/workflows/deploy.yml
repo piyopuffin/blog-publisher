@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: piyopuffin/blog
-          token: ${{secrets.ORG_GITHUB_PAT}}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           path: private
           ref: "main"
 
