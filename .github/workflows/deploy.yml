@@ -18,9 +18,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          repository: piyopuffin/blog
+          token: ${{secrets.ORG_GITHUB_PAT}}
+          path: private
+          ref: "main"
 
       - name: Checkout
-      uses: actions/setup-node@v4
+        uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
 
