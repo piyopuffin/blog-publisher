@@ -47,6 +47,7 @@ jobs:
           restore-keys: ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
+        run: cd private
         run: pnpm install
 
       - name: Build
