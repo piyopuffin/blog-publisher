@@ -50,10 +50,14 @@ jobs:
         run: cd private
 
       - name: Install dependencies
-        run: pnpm install
+        run: | 
+            cd private
+            pnpm install
 
       - name: Build
-        run: pnpm run build
+        run:  |
+            cd private
+            pnpm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
