@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: piyopuffin/blog
+          repository: piyopuffin/blog-dev
           token: ${{ secrets.BLOG_PAT }}
           path: private
           ref: "main"
