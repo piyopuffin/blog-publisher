@@ -19,12 +19,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: piyopuffin/blog
+          repository: piyopuffin/blog_publisher
           token: ${{ secrets.BLOG_PAT }}
           path: private
           ref: "main"
 
-      - name: Checkout
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
