@@ -46,10 +46,11 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: ${{ runner.os }}-pnpm-store-
 
+      - name: cd private directory
+        run: cd private
+
       - name: Install dependencies
-        run: | 
-            cd private
-            pnpm install
+        run: pnpm install
 
       - name: Build
         run: pnpm run build
